@@ -1,0 +1,16 @@
+<div>
+  <h1 class="text-column2">Our Courses</h1>
+</div>
+
+<mat-card *ngFor="let product of products" class="product-card">
+  <div class="product-details">
+    <img matCardImage [src]="product.image" alt="{{ product.name }}" class="product-image">
+    <div class="product-info">
+      <h3 class="name">{{ product.name }}</h3>
+      <p class="description">{{ product.description }}</p>
+      <!-- <span class="price">{{ product.price }}</span> -->
+    </div>
+  </div>
+</mat-card>
+
+<!-- <app-footer></app-footer> -->

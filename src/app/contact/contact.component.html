@@ -1,0 +1,41 @@
+<div class="home-container">
+  <div class="text-column">
+    <h1> GET IN TOUCH NOW!</h1>
+    <div *ngIf="isSubmitted" class="confirmation">
+      <h2> Thank you for your message. We will get back to you shortly.</h2>
+    </div>
+    <form (ngSubmit)="onSubmit()" #contactForm="ngForm" class="contact-form">
+      <div class="form-container">
+        <mat-form-field appearance="fill" class="form-field">
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Your Name" name="name" [(ngModel)]="model.name" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="form-field">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" placeholder="Your Email" name="email" [(ngModel)]="model.email" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="form-field">
+          <mat-label>Message</mat-label>
+          <textarea matInput placeholder="Your Message" name="message" [(ngModel)]="model.message" required></textarea>
+        </mat-form-field>
+
+        <button mat-raised-button type="submit" [disabled]="!contactForm.form.valid" class="submit-btn">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <div class="text-column">
+    <h1> HAVE QUESTIONS?</h1>
+    <h1> READY TO HELP!</h1>
+    <p>Email us at: contact_Edu-institution.com</p>
+    <p>Phone: +1 234 567 890</p>
+  </div>
+  <!-- <div class="image-column">
+    <img src="images/laptop.jpg" alt="Home Image" />
+  </div> -->
+</div>
+<!-- <app-footer></app-footer> -->

@@ -1,0 +1,109 @@
+.mat-toolbar {
+  background-color: #82b1ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 90px;
+  /* Adjust logo size */
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.title {
+  /* font-size: 20px; */
+  font-size: 2.7rem;
+  font-weight: bold;
+  margin-left: 10px;
+  color: #0f3657;
+}
+
+.spacer {
+  flex: 1;
+}
+
+mat-icon {
+  font-size: 24px;
+}
+
+/* Responsive styles for small screens */
+@media (max-width: 600px) {
+  .logo {
+    height: 60px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  mat-icon {
+    font-size: 28px;
+  }
+}
+
+mat-button.custom-button {
+  /* color: #ff5733; */
+  font-weight: 200;
+  padding: 15px 30px;
+  /* Adjust padding to make the button bigger or smaller */
+  font-size: 100px;
+  /* Adjust font size */
+}
+
+/* Updated */
+.example-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+mat-sidenav {
+  width: 200px;
+}
+
+mat-toolbar {
+  /* position: fixed; */
+  width: 100%;
+  top: 0;
+  z-index: 2;
+}
+
+/* last updat */
+.desktop-menu {
+  display: flex;
+  justify-content: space-around;
+  /* width: 100%; */
+}
+
+.sidenav-container {
+  display: flex;
+  height: 100vh;
+}
+
+@media (max-width: 600px) {
+  .desktop-menu {
+    display: none;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .mobile-menu {
+    display: none;
+    /* Hides the element and removes it from the layout */
+    height: 0;
+    /* Ensures the height is removed (this is optional since display: none should do the job) */
+    padding: 0;
+    /* Reset padding to ensure no space is taken */
+    margin: 0;
+    /* Reset margin if necessary */
+  }
+}

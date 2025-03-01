@@ -1,0 +1,80 @@
+<!-- <mat-toolbar color="primary" class="header">
+    <div class="logo-container">
+      <img src="images/logo.jpg" alt="Image" class="logo"/>
+    </div>
+    <div class="title-container">
+      <h1>Brilliant Educational Institute</h1>
+    </div>
+
+    <span class="spacer"></span>
+    <div>
+    <button mat-button class="custom-button" (click)="goToHome()">Home</button>
+    <button mat-button class="custom-button" (click)="goToAbout()">About Us</button>
+    <button mat-button class="custom-button" (click)="goToCourses()">Courses</button>
+    <button mat-button class="custom-button" (click)="goToCotact()">Contact</button>
+    </div>
+  </mat-toolbar> -->
+
+<mat-toolbar color="primary" class="header">
+  <div class="logo-container">
+    <img class="logo" src="images/logo2.png" alt="Logo" />
+  </div>
+  <span class="title">Brilliant Educational Institute</span>
+  <div class="spacer"></div>
+  <div class="desktop-menu">
+    <button mat-button class="custom-button" (click)="goToHome()">Home</button>
+    <button mat-button class="custom-button" (click)="goToAbout()">About Us</button>
+    <button mat-button class="custom-button" (click)="goToCourses()">Courses</button>
+    <button mat-button class="custom-button" (click)="goToCotact()">Contact</button>
+  </div>
+  <!-- <mat-icon>menu</mat-icon> -->
+  <button *ngIf="isMobile" mat-icon-button (click)="toggleSidebar()">
+    <mat-icon>menu</mat-icon>
+  </button>
+</mat-toolbar>
+
+<!-- <mat-sidenav-container class="sidenav-container"> -->
+<!-- <mat-sidenav #sidenav mode="side" >
+      <button mat-button class="custom-button" (click)="goToHome()">Home</button>
+      <button mat-button class="custom-button" (click)="goToAbout()">About Us</button>
+      <button mat-button class="custom-button" (click)="goToCourses()">Courses</button>
+      <button mat-button class="custom-button" (click)="goToCotact()">Contact</button>
+    </mat-sidenav> -->
+<!-- </mat-sidenav-container> -->
+
+<mat-sidenav #sidenav mode="over" opened="false" class="mobile-menu">
+  <mat-nav-list>
+    <!-- <a mat-list-item  ></a> -->
+    <a mat-list-item (click)="goToHome()">Home</a>
+    <a mat-list-item (click)="goToAbout()">About Us</a>
+    <a mat-list-item (click)="goToCourses()">Courses</a>
+    <a mat-list-item (click)="goToCotact()">Contact</a>
+  </mat-nav-list>
+</mat-sidenav>
+
+
+
+<!-- <mat-toolbar color="primary">
+    <div class="desktop-menu">
+      <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Home</button>
+        <button mat-menu-item>About</button>
+        <button mat-menu-item>Contact</button>
+      </mat-menu>
+    </div>
+  
+    <button *ngIf="isMobile" mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </mat-toolbar>
+  
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sidenav mode="over" position="start">
+      <button mat-button (click)="sidenav.close()">Home</button>
+      <button mat-button (click)="sidenav.close()">About</button>
+      <button mat-button (click)="sidenav.close()">Contact</button>
+    </mat-sidenav>
+    <mat-sidenav-content>
+    </mat-sidenav-content>
+  </mat-sidenav-container> -->
