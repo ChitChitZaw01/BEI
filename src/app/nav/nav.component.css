@@ -4,6 +4,9 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 16px;
+  width: 100%;
+  top: 0;
+  z-index: 2;
 }
 
 .logo-container {
@@ -13,13 +16,11 @@
 
 .logo {
   height: 90px;
-  /* Adjust logo size */
   max-width: 100%;
   object-fit: contain;
 }
 
 .title {
-  /* font-size: 20px; */
   font-size: 2.7rem;
   font-weight: bold;
   margin-left: 10px;
@@ -50,28 +51,13 @@ mat-icon {
 }
 
 mat-button.custom-button {
-  /* color: #ff5733; */
   font-weight: 200;
   padding: 15px 30px;
-  /* Adjust padding to make the button bigger or smaller */
   font-size: 100px;
-  /* Adjust font size */
-}
-
-/* Updated */
-.example-container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
 }
 
 mat-sidenav {
   width: 200px;
-}
-
-.side-nav-items {
-  display: flexbox;
-  flex-direction: column;
 }
 
 .side-menu-item {
@@ -79,32 +65,18 @@ mat-sidenav {
   margin-top: 20px;
 }
 
-mat-toolbar {
-  /* position: fixed; */
-  width: 100%;
-  top: 0;
-  z-index: 2;
-}
-
-/* last updat */
-.desktop-menu {
-  display: flex;
-  justify-content: space-around;
-  /* width: 100%; */
-}
-
 @media (min-width: 900px) {
   #menuIcon {
-      display: none;
+    display: none;
   }
 
   .mat-sidenav {
-      display: none;
+    display: none;
   }
 }
 
 @media (max-width: 900px) {
   .top-menu-item {
-      display: none;
+    display: none;
   }
 }
