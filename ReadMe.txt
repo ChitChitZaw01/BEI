@@ -92,7 +92,7 @@ ng add angular-cli-ghpages
 Option 2:
 npm install -g angular-cli-ghpages
 3. Deploy your project:
-ng deploy --base-href=/your-repo-name/        ***If your angular.json does not include like this ' "baseHref": "/Brilliant-Edu/", ', firstly you should add that.
+ng deploy --base-href=/BEI/        ***If your angular.json does not include like this ' "baseHref": "/Brilliant-Edu/", ', firstly you should add that.
 
 git push origin ccz
 
